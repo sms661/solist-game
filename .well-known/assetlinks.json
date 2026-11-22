@@ -5,4 +5,11 @@
     "package_name": "ir.solist.game",
     "sha256_cert_fingerprints": ["69:22:A1:20:9E:E8:CB:88:D3:B2:F0:97:C8:45:24:9E:50:F0:C4:BA:C7:E4:75:B7:19:94:40:F8:90:C2:AC:80"]
   }
+}, {
+  "relation": ["check_validation"],
+  "target": {
+    "namespace": "cafebazaar_twa",
+    "package_name": "ir.solist.game",
+    "sha256_cert_fingerprints": ["69:22:A1:20:9E:E8:CB:88:D3:B2:F0:97:C8:45:24:9E:50:F0:C4:BA:C7:E4:75:B7:19:94:40:F8:90:C2:AC:80"]
+  }
 }]
