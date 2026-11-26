@@ -114,6 +114,8 @@ body.fa{font-family:Vazirmatn,Tahoma,'Segoe UI',system-ui,sans-serif}
 .lang{display:flex;justify-content:center;gap:6px;margin:0 0 10px}
 .lang button{background:#dde7f5;color:#3a4553;padding:6px 16px;border-radius:999px;font-size:.85rem;font-weight:800}
 .lang button.on{background:#1f2a30;color:#fff}
+*{-webkit-user-select:none;user-select:none;-webkit-touch-callout:none;-webkit-tap-highlight-color:transparent}
+img,svg{-webkit-user-drag:none}img{pointer-events:none}
 </style>
 </head>
 <body>
@@ -661,6 +663,7 @@ function pn(m,delay,gain){try{const c=acx(),t=c.currentTime+(delay||0),g=c.creat
 function play(d){const s=d+2;pn(12*(4+Math.floor(s/7)+1)+SEMI[s%7],0,.75)}
 function playChord(c,arp){[0,c.q?3:4,7].forEach((iv,k)=>pn(60+c.r+iv,arp?k*.4:0,.6))}
 function playMidi(ms,delay){ms.forEach(m=>pn(m,delay||0,ms.length>1?.5:.8))}
+['contextmenu','selectstart','dragstart'].forEach(ev=>document.addEventListener(ev,e=>e.preventDefault()));
 document.addEventListener('pointerdown',()=>{try{acx();loadSamples()}catch(e){}},{once:true});
 setLang(LANG);
 </script>

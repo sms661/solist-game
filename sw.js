@@ -1,4 +1,4 @@
-const C='solist-game-v11';
+const C='solist-game-v12';
 const FILES=['./','index.html','privacy.html','manifest.webmanifest','icon-192.png','icon-512.png'];
 for(let m=40;m<=83;m++)FILES.push('sounds/p'+m+'.mp3');
 self.addEventListener('install',e=>{e.waitUntil(caches.open(C).then(c=>c.addAll(FILES)));self.skipWaiting()});
